@@ -1,13 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Roboto:wght@400;700&family=Young+Serif&display=swap');
 
 :root {
     box-sizing: border-box;
     --richblack: #0d1b2a;
     --oxfordblue: #1b263b;
     --yinmnblue: #415a77;
+    --ghostwhite: #f0eff4;
 }
 
 body {
     background-color: var(--richblack);
     font-family: 'Roboto', sans-serif;
+    color: var(--ghostwhite);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.container header,
+.container footer {
+    min-width: 100%;
+    background-color: var(--oxfordblue);
+    text-align: center;
+}
+
+.container header {
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-family: 'Young Serif', serif;
+}
+
+/* Find out how to automatically put boxes in rows */
+.container .book-home {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    grid-auto-rows: max-content;
+    gap: 25px;
+    min-width: 100vw;
+    margin-bottom: 25px;
+}
+
+.book-home .book-boxes {
+    min-height: 300px;
+    width: 250px;
+    background-color: var(--yinmnblue);
+    border-radius: 10px;
+}
+
+.container footer {
+    position: fixed;
+    bottom: 0;
 }
